@@ -1,7 +1,41 @@
 {% extends "base.twig" %}
 
-{% block title %}Home Page{% endblock %}
+{% block title %}
+	Benue International Marathon
+{% endblock %}
 
 {% block content %}
-    <h1>Welcome to the Home Page</h1>
+
+	<div class="hero home">
+		<div class="content h-full">
+			<div class="max-w-[600px] mx-auto flex flex-col items-start justify-center h-full
+									  animate-slideUpAndFade sm:items-center sm:text-center">
+				<div class="text-5xl font-bold text-white text-left sm:text-center">
+					Miles conquered triumph
+					<span class="text-secondary">echos</span>
+					within.
+				</div>
+				<p class="text-xl text-white text-left sm:text-center mt-4">
+					A marathon is a 26.2-mile race that tests endurance, strength, and determination.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		@keyframes slideUpAndFade {
+			0% {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.animate-slideUpAndFade {
+			animation: slideUpAndFade 1s ease-in-out;
+		}
+	</style>
 {% endblock %}

@@ -6,7 +6,7 @@
 
     body,
     html {
-        @apply font-worksans font-normal bg-white;
+        @apply font-worksans font-normal bg-dark;
         padding: 0;
         margin: 0;
     }
@@ -59,8 +59,15 @@
     }
 
     .button {
-        @apply text-gray-100 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3;
+        @apply text-gray-100 bg-primary hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3;
         cursor: pointer;
+    }
+    .button:hover {
+        text-decoration: none;
+    }
+    
+    .button.second {
+        @apply bg-secondary hover:bg-gray-700;
     }
 
     .button[disabled] {
@@ -82,5 +89,27 @@
         @apply block mb-2 font-medium text-gray-900;
     }
 
+    .icons {
+       @apply p-2 border border-gray-400 text-black bg-white rounded-[50%] h-8 w-8;
+    }
+
+    .hero {
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('/assets/images/hero-all.png');
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('/assets/images/hero-all.png');
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @apply min-h-[400px] pt-[100px];
+    }
+
+    .hero.home {
+        @apply h-screen pt-0;
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('/assets/images/hero.png');
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('/assets/images/hero.png');
+    }
+    
+    .top-nav .responsive-link {
+        @apply hidden md:inline-block;
+    }
 
 }
