@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}Benue International Marathon
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="/assets/bootstrap/bootstrap-icons.css" type="text/css"/>
+		<link rel="stylesheet" href="/assets/css/layout.css" type="text/css"/>
+	</head>
+	<body>
+		<div class="top">
+			<div class="header">
+				<ul>
+					<li>
+						<img src="/assets/images/logo.png" alt="TU MARATHON LOGO" onclick="window.location.href='/';">
+					</li>
+					<li>
+						<a href="#" title="Facebook">
+							<i class="bi bi-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Twitter">
+							<i class="bi bi-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="YouTube">
+							<i class="bi bi-youtube"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Pinterest">
+							<i class="bi bi-pinterest"></i>
+						</a>
+					</li>
+					<li>
+						<button title="Login" onclick="openLogger();">
+							<i class="bi bi-person"></i>Admin Login
+						</button>
+					</li>
+					<li>
+						<button title="Sign up" onclick="window.location.href='/register/#main';">
+							<i class="bi bi-cart"></i>
+							Register
+						</button>
+					</li>
+				</ul>
+			</div>
+			<nav class="top-navigation">
+				<div class="mobile">
+					<span class="menuText">MENU</span>
+					<button onclick="searchBox()" title="Search">
+						<i class="bi bi-search"></i>
+					</button>
+					<button onclick="menu()" title="Menu">
+						<i class="bi bi-list"></i>
+					</button>
+				</div>
+				<ul id="menuLinks">
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/about.php">About</a>
+					</li>
+					<li>
+						<a href="/register/lost_my_slip/">Get slip</a>
+					</li>
+					<li>
+						<a href="/news/">News</a>
+					</li>
+					<li>
+						<a href="/register/">Register</a>
+					</li>
+					<li>
+						<a href="/contact.php">Contact</a>
+					</li>
+				</ul>
+				<form id="menuSearch">
+					<input type="text" name="search" placeholder="Search">
+					<button name="submit">
+						<i class="bi bi-search"></i>
+					</button>
+				</form>
+			</nav>
+		</div>
+
+
+		{% block content %}{% endblock %}
+	</body>
+</html>

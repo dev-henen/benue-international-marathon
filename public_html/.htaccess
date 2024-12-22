@@ -1,0 +1,3 @@
+<Directory "/var/www/app">
+    Require all denied
+</Directory>
