@@ -6,7 +6,7 @@
 
     body,
     html {
-        @apply font-worksans font-normal bg-dark;
+        @apply font-worksans font-normal bg-dark text-light;
         padding: 0;
         margin: 0;
     }
@@ -22,7 +22,7 @@
     h4,
     h5,
     h6 {
-        @apply font-bitter font-semibold text-black;
+        @apply font-bitter font-semibold text-gray-100;
     }
 
     a,
