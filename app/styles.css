@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    body,
+    html {
+        @apply font-worksans font-normal bg-white;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bitter font-semibold text-black;
+    }
+
+    a,
+    button,
+    input,
+    textbox,
+    p,
+    span,
+    div {
+        @apply font-worksans
+    }
+
+    a {
+        @apply text-primary hover:underline;
+    }
+}
+
+@layer components {
+    .content {
+        @apply w-[95%] md:max-w-[1200px] mx-auto p-8;
+    }
+
+    .input,
+    .select {
+        @apply block border border-gray-400 text-black bg-white py-4 px-4 mb-4 w-full rounded-lg;
+        box-shadow: none;
+    }
+
+    .input:focus,
+    .input:hover {
+        @apply border-gray-900;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .button {
+        @apply text-gray-100 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3;
+        cursor: pointer;
+    }
+
+    .button[disabled] {
+        @apply bg-gray-400 cursor-not-allowed;
+    }
+
+    .select {
+        @apply py-4;
+    }
+
+    .select:focus,
+    .select:hover {
+        @apply border-gray-900;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .label {
+        @apply block mb-2 font-medium text-gray-900;
+    }
+
+
+}
