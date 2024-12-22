@@ -9,13 +9,13 @@
 	<div class="hero home">
 		<div class="content h-full flex flex-col items-center justify-center">
 			<div class="max-w-[600px] mx-auto flex flex-col items-start justify-center
-																																																																															  animate-slideUpAndFade sm:items-center sm:text-center">
-				<div class="text-5xl font-bold text-white text-left sm:text-center">
+																																																																																									  animate-slideUpAndFade sm:items-center sm:text-center">
+				<div class="text-5xl font-bold text-white text-left">
 					Miles conquered triumph
 					<span class="text-secondary">echos</span>
 					within.
 				</div>
-				<p class="text-xl text-white text-left sm:text-center mt-4">
+				<p class="text-xl text-white text-left mt-4">
 					A marathon is a 26.2-mile race that tests endurance, strength, and determination.
 				</p>
 			</div>
@@ -36,11 +36,11 @@
 			</div>
 			<div class="flex-1 p-4">
 				<div class="leading-8">
-					The Benue International Marathon (BIM) marks the first-ever full international marathon in Benue State.
-																																																																	
-																																																																	BIM aims to stand out as a highly anticipated event, attracting global attention with world-class runners, international media, and tourists converging in Nigeria. By highlighting the immense health benefits of running, jogging, and physical activity, the marathon seeks to foster unity and enhance the overall well-being of Benue residents.
-																																																																	
-																																																																	The inaugural edition is themed "A Race for Unity."
+					The Benue International Marathon (BIM) marks the first-ever full international marathon in Benue State. 
+										BIM aims to stand out as a highly anticipated event, attracting global attention with world-class runners, 
+										international media, and tourists converging in Nigeria. By highlighting the immense health benefits of running, 
+										jogging, and physical activity, the marathon seeks to foster unity and enhance the overall well-being of Benue residents. 
+										The inaugural edition is themed "A Race for Unity."
 				</div>
 			</div>
 		</div>
@@ -93,7 +93,7 @@
 				<div class="text-2xl mb-4">Distance</div>
 				<div class="leading-8">
 					BIM features a single distance category: the full marathon, spanning 42 kilometers.
-																																													As the inaugural edition of the Benue International Marathon, it marks a historic moment for the state.
+																																																							As the inaugural edition of the Benue International Marathon, it marks a historic moment for the state.
 				</div>
 			</div>
 
@@ -127,7 +127,7 @@
 					<b>42.195 kilometers (26.2 miles)</b>. It tests participants' endurance, strength, and mental determination. Originating from the legend of a Greek soldier who ran from
 					<b>Marathon to Athens</b>
 					to deliver a message, the marathon has become a global sporting event.
-																									It often involves months of training and is celebrated worldwide, with races attracting professional athletes and recreational runners alike. Marathons are not only physical challenges but also symbols of perseverance, community spirit, and personal achievement.
+																																			It often involves months of training and is celebrated worldwide, with races attracting professional athletes and recreational runners alike. Marathons are not only physical challenges but also symbols of perseverance, community spirit, and personal achievement.
 				</div>
 			</div>
 		</div>
@@ -138,7 +138,9 @@
 		<div class="flex flex-col md:flex-row gap-6">
 			<div class="flex-1 p-6 rounded-lg bg-secondary">
 				<div class="leading-8">
-					Participants stand a chance to win prizes of up to <b>1,000,000 NGN</b> and more.
+					Participants stand a chance to win prizes of up to
+					<b>1,000,000 NGN</b>
+					and more.
 				</div>
 			</div>
 			<div class="flex-1 p-6 rounded-lg bg-secondary">
@@ -199,44 +201,44 @@
 	</style>
 
 	 <script>
-			const daysElement = document.getElementById("countdownDays");
-			const hoursElement = document.getElementById("countdownHours");
-			const minutesElement = document.getElementById("countdownMinutes");
-			const secondsElement = document.getElementById("countdownSeconds");
-			
-			const queryString = document.currentScript.src.substring(document.currentScript.src.indexOf("?"));
-			const matchTime = Date.parse('2025-01-05T00:00:00Z');
-			
-			if (!isNaN(matchTime)) {
-			    const countdownTarget = matchTime;
-			
-			    const updateCountdown = () => {
-			        const currentTime = Date.now();
-			        const timeRemaining = countdownTarget - currentTime;
-			
-			        if (timeRemaining > 0) {
-			            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-			            const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
-			            const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
-			            const seconds = Math.floor((timeRemaining / 1000) % 60);
-			
-			            daysElement.textContent = `${days}`;
-			            hoursElement.textContent = `${hours.toString().padStart(2, "0")}`;
-			            minutesElement.textContent = `${minutes.toString().padStart(2, "0")}`;
-			            secondsElement.textContent = `${seconds.toString().padStart(2, "0")}`;
-			        } else {
-			            daysElement.textContent = "000";
-			            hoursElement.textContent = "00";
-			            minutesElement.textContent = "00";
-			            secondsElement.textContent = "00";
-			            clearInterval(countdownInterval);
-			        }
-			    };
-			
-			    const countdownInterval = setInterval(updateCountdown, 1000);
-			    updateCountdown();
-			} else {
-			    console.error("Invalid date format for 'nextMatch'.");
-			}
-		</script>
+					const daysElement = document.getElementById("countdownDays");
+					const hoursElement = document.getElementById("countdownHours");
+					const minutesElement = document.getElementById("countdownMinutes");
+					const secondsElement = document.getElementById("countdownSeconds");
+					
+					const queryString = document.currentScript.src.substring(document.currentScript.src.indexOf("?"));
+					const matchTime = Date.parse('2025-01-05T00:00:00Z');
+					
+					if (!isNaN(matchTime)) {
+					    const countdownTarget = matchTime;
+					
+					    const updateCountdown = () => {
+					        const currentTime = Date.now();
+					        const timeRemaining = countdownTarget - currentTime;
+					
+					        if (timeRemaining > 0) {
+					            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+					            const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+					            const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
+					            const seconds = Math.floor((timeRemaining / 1000) % 60);
+					
+					            daysElement.textContent = `${days}`;
+					            hoursElement.textContent = `${hours.toString().padStart(2, "0")}`;
+					            minutesElement.textContent = `${minutes.toString().padStart(2, "0")}`;
+					            secondsElement.textContent = `${seconds.toString().padStart(2, "0")}`;
+					        } else {
+					            daysElement.textContent = "000";
+					            hoursElement.textContent = "00";
+					            minutesElement.textContent = "00";
+					            secondsElement.textContent = "00";
+					            clearInterval(countdownInterval);
+					        }
+					    };
+					
+					    const countdownInterval = setInterval(updateCountdown, 1000);
+					    updateCountdown();
+					} else {
+					    console.error("Invalid date format for 'nextMatch'.");
+					}
+				</script>
 {% endblock %}
