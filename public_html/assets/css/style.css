@@ -709,6 +709,16 @@ a:hover {
   }
 }
 
+.top-nav .responsive-link-x {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .top-nav .responsive-link-x {
+    display: inline-block;
+  }
+}
+
 .fixed {
   position: fixed;
 }

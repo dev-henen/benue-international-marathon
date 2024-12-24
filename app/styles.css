@@ -42,7 +42,7 @@
 
 @layer components {
     .content {
-        @apply w-[100%] md:max-w-[1200px] mx-auto p-4 md:p-8;
+        @apply w-full md:max-w-[1200px] mx-auto p-4 md:p-8;
     }
 
     .input,
@@ -110,6 +110,10 @@
     }
     
     .top-nav .responsive-link {
+        @apply hidden md:inline-block;
+    }
+    
+    .top-nav .responsive-link-x {
         @apply hidden md:inline-block;
     }
 
