@@ -696,7 +696,7 @@ a:hover {
 .hero.home {
   height: 100vh;
   padding-top: 0px;
-  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero.png');
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/assets/images/hero.png);
 }
 
 .top-nav .responsive-link {
@@ -705,16 +705,6 @@ a:hover {
 
 @media (min-width: 768px) {
   .top-nav .responsive-link {
-    display: inline-block;
-  }
-}
-
-.top-nav .responsive-link-x {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .top-nav .responsive-link-x {
     display: inline-block;
   }
 }
@@ -1038,6 +1028,11 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:inline-block {
     display: inline-block;
   }
@@ -1046,11 +1041,32 @@ a:hover {
     display: none;
   }
 
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }

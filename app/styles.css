@@ -105,15 +105,11 @@
     
     .hero.home {
         @apply h-screen pt-0;
-        background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero.png');
-        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero.png');
+        background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/assets/images/hero.png);
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/assets/images/hero.png);
     }
     
     .top-nav .responsive-link {
-        @apply hidden md:inline-block;
-    }
-    
-    .top-nav .responsive-link-x {
         @apply hidden md:inline-block;
     }
 
