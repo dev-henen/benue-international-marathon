@@ -102,6 +102,7 @@
         @apply min-h-[250px] pt-[100px];
     }
 
+    
     .hero.home {
         @apply h-screen pt-0;
         background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero.png');
