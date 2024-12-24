@@ -42,7 +42,7 @@
 
 @layer components {
     .content {
-        @apply w-[95%] md:max-w-[1200px] mx-auto p-8;
+        @apply w-[100%] md:max-w-[1200px] mx-auto p-4 md:p-8;
     }
 
     .input,
