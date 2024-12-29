@@ -7,4 +7,3 @@ return function (RouteCollector $r) {
     $r->addRoute('GET', '/about-us', ['App\Controllers\Pages\AboutController', 'index']);
     $r->addRoute('GET', '/register', ['App\Controllers\Pages\RegisterController', 'index']);
 };
-
