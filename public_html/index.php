@@ -1,6 +1,9 @@
 <?php
 define('ROOT_PATH', dirname(__DIR__));
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 require ROOT_PATH . '/vendor/autoload.php';
 
 use FastRoute\Dispatcher;
@@ -14,6 +17,7 @@ $loader = new FilesystemLoader($templateDir);
 $GLOBALS['twig'] = new Environment($loader, [
     'cache' => ROOT_PATH . '/cache',
     'debug' => true,
+    'auto_reload' => true, // Enable this for development
 ]);
 
 // Determine whether the request is for the API or pages
