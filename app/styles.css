@@ -6,7 +6,7 @@
 
     body,
     html {
-        @apply font-worksans font-normal bg-dark text-light;
+        @apply font-worksans font-normal bg-light text-dark dark:bg-dark dark:text-light;
         padding: 0;
         margin: 0;
     }
@@ -22,7 +22,7 @@
     h4,
     h5,
     h6 {
-        @apply font-bitter font-semibold text-gray-100;
+        @apply font-bitter font-semibold text-gray-900 dark:text-gray-100;
     }
 
     a,
@@ -47,13 +47,13 @@
 
     .input,
     .select {
-        @apply block border border-gray-400 text-black bg-white py-4 px-4 mb-4 w-full rounded-lg;
+        @apply block border border-gray-300 dark:border-gray-600 text-dark dark:text-light bg-transparent py-4 px-4 mb-4 w-full rounded-lg;
         box-shadow: none;
     }
 
     .input:focus,
     .input:hover {
-        @apply border-gray-900;
+        @apply border-gray-400 dark:border-gray-500;
         box-shadow: none;
         outline: 0;
     }
@@ -80,13 +80,13 @@
 
     .select:focus,
     .select:hover {
-        @apply border-gray-900;
+        @apply border-gray-500;
         box-shadow: none;
         outline: 0;
     }
 
     .label {
-        @apply block mb-2 font-medium text-gray-900;
+        @apply block mb-2 font-medium text-gray-800 dark:text-gray-200;
     }
 
     .icons {
@@ -94,6 +94,14 @@
     }
 
     .hero {
+        background-image: -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('/assets/images/hero-all.png');
+        background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('/assets/images/hero-all.png');
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @apply min-h-[250px] pt-[100px];
+    }
+    .hero-dark {
         background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero-all.png');
         background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/assets/images/hero-all.png');
         background-position: top left;
@@ -104,6 +112,11 @@
 
     
     .hero.home {
+        @apply h-screen pt-0;
+        background-image: -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(/assets/images/hero.png);
+        background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(/assets/images/hero.png);
+    }
+    .hero-dark.home {
         @apply h-screen pt-0;
         background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/assets/images/hero.png);
         background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/assets/images/hero.png);

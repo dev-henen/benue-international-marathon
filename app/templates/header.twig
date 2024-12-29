@@ -1,31 +1,31 @@
-<div class="fixed top-0 left-0 w-full z-40 bg-dark top-nav">
+<div class="fixed top-0 left-0 w-full z-40 bg-light dark:bg-dark shadow top-nav">
 	<div class="content py-3">
 		<nav class="flex items-center justify-between">
 			<div>
 				<ul class="flex items-center gap-4 text-sm">
 					<li>
 						<a href="/">
-							<img src="/assets/images/logo.png" alt="logo" width="70"/>
+							<img src="/assets/images/logo.png" alt="logo" width="70" class="invert dark:invert-0" />
 						</a>
 					</li>
 					{% set navLinks %}
 					<li>
-						<a href="/" class="text-gray-300 responsive-link">
+						<a href="/" class="text-gray-600 dark:text-gray-300 responsive-link">
 							Home
 						</a>
 					</li>
 					<li>
-						<a href="/about-us" class="text-gray-300 responsive-link">
+						<a href="/about-us" class="text-gray-600 dark:text-gray-300 responsive-link">
 							About us
 						</a>
 					</li>
 					<li>
-						<a href="/register" class="text-gray-300 responsive-link">
+						<a href="/register" class="text-gray-600 dark:text-gray-300 responsive-link">
 							Register
 						</a>
 					</li>
 					<li>
-						<a href="/contact-us" class="text-gray-300 responsive-link">
+						<a href="/contact-us" class="text-gray-600 dark:text-gray-300 responsive-link">
 							Contact us
 						</a>
 					</li>
@@ -65,7 +65,7 @@
 						</a>
 					</li>
 					<li>
-						<button class="md:hidden text-2xl text-white p-2" id="menu-button">
+						<button class="md:hidden text-2xl text-dark dark:text-white p-2" id="menu-button">
 							<i class="bi bi-list"></i>
 						</button>
 					</li>
@@ -75,14 +75,14 @@
 	</div>
 </div>
 
-<nav class="fixed top-0 left-0 w-full h-full z-50 bg-dark p-5 hidden md:hidden" id="menu">
+<nav class="fixed top-0 left-0 w-full h-full z-50 bg-light dark:bg-dark p-5 hidden md:hidden" id="menu">
 
-	<span class="fixed top right-5 text-4xl text-white p-2 cursor-pointer" id="close-menu-button">&times;</span>
+	<span class="fixed top right-5 text-4xl text-dark dark:text-white p-2 cursor-pointer" id="close-menu-button">&times;</span>
 
 	<ul class="flex flex-col items-center gap-4 text-2xl mt-16">
 		{{ navLinks }}
 		<li>
-			<a href="/register/slip" class="text-gray-300 responsive-link">
+			<a href="/register/slip" class="text-gray-600 dark:text-gray-300 responsive-link">
 				Get slip
 			</a>
 		</li>

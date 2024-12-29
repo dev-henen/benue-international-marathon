@@ -1,0 +1,217 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	about us
+{% endblock %}
+
+{% block content %}
+
+	<div class="hero dark:hero-dark">
+		<div class="content h-full flex flex-col ">
+			<h1 class="text-3xl font-bold text-left mt-20">
+				Register
+			</h1>
+		</div>
+	</div>
+
+	<div class="content mb-10">
+
+		<p class="text-lg mb-8 leading-8">
+			Register now for the Benue International Marathon—secure your spot, choose your distance, and get ready to run!
+		</p>
+
+		<div class=" p-4 py-8 rounded-lg shadow-lg">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold">2025 Marathon Race</h1>
+				<h2 class="text-xl font-semibold mt-2">Registration</h2>
+				<p class="mt-2">All intending participants are required to register</p>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8" ng-app="registrationApp" ng-controller="RegistrationController">
+				<div class="col-span-2">
+					<div class="flex">
+						<span class="text-red-500 text-sm w-1/2">[[ errors.surname ]]</span>
+						<span class="text-red-500 text-sm w-1/2">[[ errors.firstName ]]</span>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div class="mb-4">
+							<label class="label">
+								SURNAME<span class="text-red-500">*</span>
+							</label>
+							<input type="text" name="surname" class="input" ng-model="formData.surname"/>
+						</div>
+						<div class="mb-4">
+							<label class="label">
+								FIRST NAME<span class="text-red-500">*</span>
+							</label>
+							<input type="text" name="firstName" class="input" ng-model="formData.firstName"/>
+						</div>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.gender ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							Gender<span class="text-red-500">*</span>
+						</label>
+						<div class="flex gap-4">
+							<label class="inline-flex items-center">
+								<input type="radio" name="gender" value="Female" ng-model="formData.gender"/>
+								<span class="ml-2">Female</span>
+							</label>
+							<label class="inline-flex items-center">
+								<input type="radio" name="gender" value="Male" ng-model="formData.gender"/>
+								<span class="ml-2">Male</span>
+							</label>
+						</div>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.bloodGroup ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							BLOOD GROUP<span class="text-red-500">*</span>
+						</label>
+						<input type="text" name="bloodGroup" class="input" ng-model="formData.bloodGroup"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.birthday ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							BIRTHDAY<span class="text-red-500">*</span>
+						</label>
+						<input type="date" name="birthday" class="input" ng-model="formData.birthday"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.nationality ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							NATIONALITY<span class="text-red-500">*</span>
+						</label>
+						<select name="nationality" class="select" ng-model="formData.nationality">
+							<option class="bg-gray-400 text-gray-700" value="nigeria">Nigeria</option>
+						</select>
+					</div>
+
+					<div class="flex">
+						<span class="text-red-500 text-sm w-1/2">[[ errors.stateOfOrigin ]]</span>
+						<span class="text-red-500 text-sm w-1/2">[[ errors.stateOfResidence ]]</span>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div class="mb-4">
+							<label class="label">
+								STATE OF ORIGIN<span class="text-red-500">*</span>
+							</label>
+							<select name="stateOfOrigin" class="select" ng-model="formData.stateOfOrigin">
+								<option class="bg-gray-400 text-gray-700" value="Abia">Abia</option>
+								<option class="bg-gray-400 text-gray-700" value="Adamawa">Adamawa</option>
+								<option class="bg-gray-400 text-gray-700" value="Akwa ibom">Akwa Ibom</option>
+								<option class="bg-gray-400 text-gray-700" value="FCT">FCT</option>
+							</select>
+						</div>
+						<div class="mb-4">
+							<label class="label">
+								STATE OF RESIDENCE<span class="text-red-500">*</span>
+							</label>
+							<select name="stateOfResidence" class="select" ng-model="formData.stateOfResidence">
+								<option class="bg-gray-400 text-gray-700" value="Abia">Abia</option>
+								<option class="bg-gray-400 text-gray-700" value="Adamawa">Adamawa</option>
+								<option class="bg-gray-400 text-gray-700" value="Akwa ibom">Akwa Ibom</option>
+								<option class="bg-gray-400 text-gray-700" value="FCT">FCT</option>
+							</select>
+						</div>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.email ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							EMAIL<span class="text-red-500">*</span>
+						</label>
+						<input type="email" name="email" class="input" ng-model="formData.email"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.phoneNumber ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							PHONE NO.<span class="text-red-500">*</span>
+						</label>
+						<input type="tel" name="phoneNumber" class="input" ng-model="formData.phoneNumber"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.contactAddress ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							CONTACT ADDRESS<span class="text-red-500">*</span>
+						</label>
+						<textarea name="contactAddress" rows="4" class="input" ng-model="formData.contactAddress"></textarea>
+					</div>
+
+					<div class="flex">
+						<span class="text-red-500 text-sm w-1/2">[[ errors.myHeight ]]</span>
+						<span class="text-red-500 text-sm w-1/2">[[ errors.myWeight ]]</span>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div class="mb-4">
+							<label class="label">
+								HEIGHT<span class="text-red-500">*</span>
+							</label>
+							<input type="text" name="myHeight" class="input" ng-model="formData.myHeight"/>
+						</div>
+						<div class="mb-4">
+							<label class="label">
+								WEIGHT<span class="text-red-500">*</span>
+							</label>
+							<input type="text" name="myWeight" class="input" ng-model="formData.myWeight"/>
+						</div>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.emergencyPhoneNumber ]]</span>
+					<div class="mb-4">
+						<label class="label">
+							EMERGENCY PHONE NO.<span class="text-red-500">*</span>
+						</label>
+						<input type="tel" name="emergencyPhoneNumber" class="input" ng-model="formData.emergencyPhoneNumber"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.passport ]]</span>
+					<div class="mb-10">
+						<label class="label">
+							SELECT RECENT PASSPORT<span class="text-red-500">*</span>
+						</label>
+						<input type="file" name="passport" accept="image/png,image/jpg,image/jpeg,image/gif" class="input" ng-model="formData.passport"/>
+					</div>
+
+					<span class="text-red-500 text-sm">[[ errors.confirm ]]</span>
+					<div class="p-4 bg-gray-50 rounded-lg">
+						<div class="flex items-start space-x-2">
+							<input type="checkbox" name="confirm" value="binded" ng-model="formData.confirm"/>
+							<div class="text-sm text-gray-600">
+								<p>
+									I declare my understanding that running is a potentially Hazardous
+																		            activity in which I am only permitted to participate in with sufficient
+																		            training and a good level of overall health. I hereby accept all risks
+																		            involved which may include injury or death. I agree to abide by the
+																		            T & C as well as rules and regulations of TUM 2025.
+																		            I grant permission to TUM and unicentral R.G Nigeria LTD for
+																		            the use of my personal data provided by registration and any of my
+																		            Photographs, passports or Recordings of me and others recorded during this
+																		            event for any legitimate purpose.
+									<a href="#" class="text-blue-600 hover:text-blue-800">Read more...</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<button class="button mt-8" ng-click="submitForm()">
+						SUBMIT ENTRY
+					</button>
+				</div>
+				<div class="hidden lg:block"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/js/register.js"></script>
+
+{% endblock %}
