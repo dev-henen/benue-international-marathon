@@ -956,6 +956,14 @@ a:hover {
   width: 2.5rem;
 }
 
+.w-11 {
+  width: 2.75rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
 .max-w-\[600px\] {
   max-width: 600px;
 }
