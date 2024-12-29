@@ -31,7 +31,7 @@ $prefix = '/api/';
 $isApiRequest = strpos($uri, $prefix) === 0;
 
 // Load the appropriate routes file
-$routesFile = $isApiRequest ? ROOT_PATH . '/app/routes/api.php' : ROOT_PATH . '/app/routes/pages.php';
+$routesFile = $isApiRequest ? ROOT_PATH . '/App/routes/api.php' : ROOT_PATH . '/App/routes/pages.php';
 
 // Create the dispatcher
 $dispatcher = FastRoute\simpleDispatcher(require $routesFile);
