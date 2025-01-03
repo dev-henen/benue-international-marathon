@@ -43,12 +43,12 @@ $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
     case Dispatcher::NOT_FOUND:
         http_response_code(404);
-        echo $twig->render('errors/404.twig'); // Custom 404 page
+        echo $GLOBALS['twig']->render('/404.twig'); // Custom 404 page
         break;
 
     case Dispatcher::METHOD_NOT_ALLOWED:
         http_response_code(405);
-        echo $twig->render('errors/405.twig'); // Custom 405 page
+        echo $GLOBALS['twig']->render('/405.twig'); // Custom 405 page
         break;
 
     case Dispatcher::FOUND:
