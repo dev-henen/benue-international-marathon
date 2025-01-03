@@ -4,6 +4,10 @@ define('ROOT_PATH', dirname(__DIR__));
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: private, max-age=0, must-revalidate");
+header("Pragma: no-cache");
+
 require ROOT_PATH . '/vendor/autoload.php';
 
 use FastRoute\Dispatcher;
