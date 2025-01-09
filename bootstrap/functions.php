@@ -1,6 +1,6 @@
 <?php 
 
-function validateAndSaveImage($base64Data) {
+function validateAndSaveImage($base64Data, $save_image = true) {
     // Decode base64 data
     $imageData = base64_decode($base64Data);
     if ($imageData === false) {
@@ -64,13 +64,15 @@ function validateAndSaveImage($base64Data) {
             throw new Exception('Upload directory is not writable');
         }
         
-        // Save the file
-        if (file_put_contents($uploadPath, $imageData) === false) {
-            throw new Exception('Failed to write file to disk');
+        if($save_image === true){
+            // Save the file
+            if (file_put_contents($uploadPath, $imageData) === false) {
+                throw new Exception('Failed to write file to disk');
+            }
+            // Set proper file permissions
+            chmod($uploadPath, 0644);
         }
         
-        // Set proper file permissions
-        chmod($uploadPath, 0644);
         
     } catch (Exception $e) {
         fclose($tempFile);

@@ -3,11 +3,16 @@
         "autoload",
         "firstname",
         "Gboko",
+        "httponly",
+        "nosniff",
         "onclick",
+        "Paystack",
         "Pinterest",
         "stylesheet",
         "Tarka",
+        "tranx",
         "Tsekucha",
-        "worksans"
+        "worksans",
+        "Yabacon"
     ]
 }

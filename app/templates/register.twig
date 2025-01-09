@@ -125,7 +125,7 @@
 						<label class="label">
 							EMAIL<span class="text-red-500">*</span>
 						</label>
-						<input type="email" name="email" class="input" ng-model="formData.email"/>
+						<input type="email" name="email" class="input" id="registering-email" ng-model="formData.email"/>
 					</div>
 
 					<span class="text-red-500 text-sm">[[ errors.phoneNumber ]]</span>
@@ -212,6 +212,8 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@mig8447/lodash-debounce-throttle@4.17.5/dist/lodash-debounce-throttle.min.js"></script>
+	<script src="https://js.paystack.co/v1/inline.js"></script>
 	<script src="/js/register.js"></script>
 
 {% endblock %}
