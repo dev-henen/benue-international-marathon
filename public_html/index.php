@@ -1,7 +1,15 @@
 <?php
+
+use FastRoute\Dispatcher;
+use FastRoute\RouteCollector;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 define('ROOT_PATH', dirname(__DIR__));
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 1); // TODO: remove this in production
+ini_set('error_log', ROOT_PATH . '/error.log');
 error_reporting(E_ALL);
 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -9,11 +17,6 @@ header("Cache-Control: private, max-age=0, must-revalidate");
 header("Pragma: no-cache");
 
 require ROOT_PATH . '/vendor/autoload.php';
-
-use FastRoute\Dispatcher;
-use FastRoute\RouteCollector;
-use Twig\Loader\FilesystemLoader;
-use Twig\Environment;
 
 // Set up Twig
 $templateDir = ROOT_PATH . '/app/templates';

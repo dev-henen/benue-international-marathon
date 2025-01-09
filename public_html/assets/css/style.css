@@ -910,18 +910,6 @@ a:hover {
   margin-top: 2rem;
 }
 
-.mt-\[\] {
-  margin-top: ;
-}
-
-.mt-\[50p\] {
-  margin-top: 50p;
-}
-
-.mt-\[50px\] {
-  margin-top: 50px;
-}
-
 .mt-\[100px\] {
   margin-top: 100px;
 }
@@ -1225,10 +1213,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-\[\] {
-    margin-top: ;
-  }
-
   .md\:mt-\[10px\] {
     margin-top: 10px;
   }
@@ -1316,13 +1300,13 @@ a:hover {
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   }
 
-  .dark\:invert-0 {
-    --tw-invert: invert(0);
+  .dark\:invert {
+    --tw-invert: invert(100%);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
-  .dark\:invert {
-    --tw-invert: invert(100%);
+  .dark\:invert-0 {
+    --tw-invert: invert(0);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }

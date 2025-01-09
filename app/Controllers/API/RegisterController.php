@@ -2,6 +2,11 @@
 
 namespace App\Controllers\API;
 
+use App\Models\Register;
+
+require ROOT_PATH . '/bootstrap/bootstrap.php';
+require ROOT_PATH . '/bootstrap/functions.php';
+
 class RegisterController
 {
     private const REQUIRED_FIELDS = [
@@ -20,7 +25,6 @@ class RegisterController
         'myWeight',
         'emergencyPhoneNumber',
         'passport',
-        'confirm'
     ];
 
     private function validateInput(array $data): array
@@ -44,8 +48,13 @@ class RegisterController
         }
 
         if (!empty($data['birthday'])) {
-            $date = \DateTime::createFromFormat('Y-m-d', $data['birthday']);
-            if (!$date || $date->format('Y-m-d') !== $data['birthday']) {
+            // Extract the date part (YYYY-MM-DD) by removing the time portion
+            $datePart = preg_replace('/T.*$/', '', $data['birthday']);
+
+            // Check if the date part is valid (YYYY-MM-DD format)
+            $date = \DateTime::createFromFormat('Y-m-d', $datePart);
+
+            if (!$date || $date->format('Y-m-d') !== $datePart) {
                 $errors['birthday'] = 'Invalid date format';
             }
         }
@@ -84,27 +93,40 @@ class RegisterController
                 return;
             }
 
-            // TODO: Add your database logic here
-            // For demonstration, we'll use a mock user ID
-            $userId = rand(1000, 9999);
+            $responseData = [];
 
-            // Prepare response data (only include necessary fields)
-            $responseData = [
-                'id' => $userId,
-                'surname' => $data['surname'],
-                'firstName' => $data['firstName'],
-                'email' => $data['email'],
-                'gender' => $data['gender'],
-                'birthday' => $data['birthday'],
-                'nationality' => $data['nationality']
-            ];
+            $passport = validateAndSaveImage($data['passport']['base64']);
+
+            if ($passport['success'] === false) {
+                $this->sendResponse(false, ['errors' => ['passport' => $passport['error']]], 400);
+                return;
+            }
+
+            $passport_name = $passport['filename'];
+
+            $register = new Register();
+            $register->surname = $data['surname'];
+            $register->firstname = $data['firstName'];
+            $register->gender = strtolower($data['gender']);
+            $register->blood_group = $data['bloodGroup'];
+            $register->birthday = date('Y-m-d', strtotime($data['birthday']));
+            $register->country = $data['nationality'];
+            $register->state_of_origin = $data['stateOfOrigin'];
+            $register->state_of_residence = $data['stateOfResidence'];
+            $register->email = $data['email'];
+            $register->phone_number = $data['phoneNumber'];
+            $register->contact_address = $data['contactAddress'];
+            $register->my_height = $data['myHeight'];
+            $register->my_weight = $data['myWeight'];
+            $register->emergency_phone_number = $data['emergencyPhoneNumber'];
+            $register->passport = $passport_name;
+            $register->save();
 
             $this->sendResponse(true, [
                 'message' => 'Registration successful!',
                 'data' => $responseData
             ], 201);
         } catch (\Throwable $e) {
-            // Log the error (implement proper logging)
             error_log($e->getMessage());
 
             $this->sendResponse(false, [
