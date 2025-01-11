@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2025 at 11:19 AM
+-- Generation Time: Jan 11, 2025 at 03:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,6 +65,7 @@ CREATE TABLE `registrations` (
   `my_weight` varchar(6) NOT NULL,
   `emergency_phone_number` varchar(30) NOT NULL,
   `passport` varchar(300) NOT NULL,
+  `payment_reference` varchar(255) NOT NULL,
   `reg_year` year(4) NOT NULL DEFAULT current_timestamp(),
   `reg_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -99,7 +100,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `registrations`
 --
 ALTER TABLE `registrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

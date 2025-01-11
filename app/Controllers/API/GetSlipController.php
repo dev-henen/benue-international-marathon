@@ -81,6 +81,46 @@ class GetSlipController
         }
     }
 
+    public function getRegistrationInfo(): void
+    {
+        try {
+            $input = file_get_contents('php://input');
+            if ($input === false) {
+                throw new \RuntimeException('Failed to read input data');
+            }
+
+            $input = json_decode($input, true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new \RuntimeException('Invalid JSON data');
+            }
+
+            $hashCode = $input['hashCode'];
+
+            $encryptionKey = ENCRYPTION_KEY;
+            $encryption = new SimpleEncryption($encryptionKey);
+            $decrypted_data = $encryption->decrypt($hashCode);
+
+            settype($decrypted_data, 'integer');
+            if (!is_int($decrypted_data)) {
+                throw new \RuntimeException('Invalid hashCode');
+            }
+
+            $registration = Register::where('id', $decrypted_data)
+                ->first();
+            if ($registration) {
+                echo json_encode($registration);
+            } else {
+                throw new \RuntimeException('No registration found');
+            }
+        } catch (\Throwable $e) {
+            error_log($e->getMessage());
+
+            $this->sendResponse(false, [
+                'message' => 'An unexpected error occurred'
+            ], 500);
+        }
+    }
+
     private function sendResponse(bool $success, array $data, int $statusCode): void
     {
         http_response_code($statusCode);

@@ -48,7 +48,7 @@ class GetSlipController
             // Check if the link has expired
             $current_time = time();
             if ($current_time > $link_expiration_time) {
-                // throw new \Exception("The link has expired.");
+                throw new \Exception("The link has expired.");
             }
 
 
@@ -95,5 +95,10 @@ class GetSlipController
             http_response_code(400); // Return 400 for client error
             echo "Error: " . $e->getMessage();
         }
+    }
+
+    public function verify() {
+        global $twig;
+        echo $twig->render('verify-slip.twig',);
     }
 }
