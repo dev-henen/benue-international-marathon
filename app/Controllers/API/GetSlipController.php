@@ -67,10 +67,10 @@ class GetSlipController
                 if (Mailer::send($email, $data['subject'], $data)) {
                     echo "Email sent successfully!";
                 } else {
-                    echo "Failed to send email.";
+                    throw new \Exception("Failed to send email.");
                 }
             } else {
-                error_log("No registration found.");
+                throw new \Exception("No registration found.");
             }
         } catch (\Throwable $e) {
             error_log($e->getMessage());
