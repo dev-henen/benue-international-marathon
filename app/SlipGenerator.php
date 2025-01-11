@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 use FPDF;
@@ -13,7 +14,7 @@ class SlipGenerator
         $this->pdf = new FPDF();
         $this->pdf->AddPage();
     }
-   /**
+    /**
      * Generate the slip with the provided design and details.
      *
      * @param array $details - Associative array containing details for the slip.
@@ -34,10 +35,12 @@ class SlipGenerator
         $this->pdf->SetFont('Arial', 'B', 12);
 
         // Images Section
-        $this->pdf->Image($details['passport'] ?? ROOT_PATH . '/public_html/assets/images/profile.png', 15, 45, 30, 30, 'png');
+        $this->pdf->Image($details['passport'] ?? ROOT_PATH . '/public_html/assets/images/profile.png', 15, 48, 25, 25, 'png');
         $this->pdf->Cell(0, 45, '', 0, 0, 'L');
-        // $this->pdf->Image($details['qrcode_location'] ?? 'images/default_qrcode.png', 165, 45, 30, 30, 'png');
-        // $this->pdf->Cell(0, 45, '', 0, 0, 'L');
+        if ($details['qrcode_location']) {
+            $this->pdf->Image($details['qrcode_location'], 165, 45, 30, 30, 'png');
+            $this->pdf->Cell(0, 45, '', 0, 0, 'L');
+        }
 
         // Personal Details
         $this->pdf->SetFont('Arial', '', 10);
@@ -60,7 +63,6 @@ class SlipGenerator
         $this->generateRow('HEIGHT', $details['height'] ?? '', 155, 'LEFT', true);
         $this->generateRow('WEIGHT', $details['weight'] ?? '', 155, 'CENTER', true);
         $this->generateRow('EMERGENCY PHONE NO.', $details['emergency_phone'] ?? '', 155, 'RIGHT', true);
-        $this->generateRow('GENDER', $details['gender'] ?? '', 170, 'FULL');
 
         // Terms & Conditions Section
         $this->pdf->SetY(195);
@@ -142,7 +144,7 @@ class SlipGenerator
         $this->pdf->Output('F', $filePath);
     }
 
-        /**
+    /**
      * Download the PDF as a file.
      *
      * @param string $fileName - The name of the file to download.
