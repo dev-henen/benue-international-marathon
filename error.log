@@ -1,0 +1,154 @@
+[10-Jan-2025 14:49:48 Europe/Berlin] Call to a member function connection() on null
+[10-Jan-2025 14:49:51 Europe/Berlin] Call to a member function connection() on null
+[10-Jan-2025 14:57:28 Europe/Berlin] Decryption failed.
+[10-Jan-2025 14:57:35 Europe/Berlin] Decryption failed.
+[10-Jan-2025 14:57:35 Europe/Berlin] Decryption failed.
+[10-Jan-2025 14:57:37 Europe/Berlin] Decryption failed.
+[10-Jan-2025 15:29:45 Europe/Berlin] The link has expired.
+[10-Jan-2025 15:30:01 Europe/Berlin] PHP Warning:  Undefined variable $email in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 64
+[10-Jan-2025 15:30:01 Europe/Berlin] Undefined constant "App\Controllers\Pages\NEXT_MATCH"
+[10-Jan-2025 15:31:11 Europe/Berlin] Call to undefined method Endroid\QrCode\Builder\Builder::create()
+[10-Jan-2025 15:33:06 Europe/Berlin] PHP Fatal error:  Class declarations may not be nested in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 77
+[10-Jan-2025 15:34:52 Europe/Berlin] The link has expired.
+[10-Jan-2025 15:35:04 Europe/Berlin] Call to undefined method Endroid\QrCode\Builder\Builder::create()
+[10-Jan-2025 15:35:05 Europe/Berlin] Call to undefined method Endroid\QrCode\Builder\Builder::create()
+[10-Jan-2025 15:37:57 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:37:57 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:47 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:48 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:48 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:48 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:48 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:38:49 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 15:39:35 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setSize()
+[10-Jan-2025 15:39:36 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setSize()
+[10-Jan-2025 15:40:15 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setEncoding()
+[10-Jan-2025 15:40:16 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setEncoding()
+[10-Jan-2025 15:40:16 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setEncoding()
+[10-Jan-2025 15:40:45 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setErrorCorrectionLevel()
+[10-Jan-2025 15:40:46 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setErrorCorrectionLevel()
+[10-Jan-2025 15:40:46 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setErrorCorrectionLevel()
+[10-Jan-2025 15:41:27 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setSize()
+[10-Jan-2025 15:41:27 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::setSize()
+[10-Jan-2025 15:44:10 Europe/Berlin] Undefined constant Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh::HIGH
+[10-Jan-2025 15:44:38 Europe/Berlin] Undefined constant Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh::HIGH
+[10-Jan-2025 15:45:40 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:45:42 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:46:53 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:46:54 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:46:54 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:47:43 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:47:44 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:48:47 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:48:48 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:48:48 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:48:48 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:44 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:45 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:45 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:45 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:46 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:46 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:46 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:46 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:46 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:47 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:56:48 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+[10-Jan-2025 15:59:26 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 15:59:54 Europe/Berlin] Failed to generate QR code: Unable to generate image: check your GD installation
+[10-Jan-2025 15:59:55 Europe/Berlin] Failed to generate QR code: Unable to generate image: check your GD installation
+[10-Jan-2025 16:00:58 Europe/Berlin] Class "App\EpsWriter" not found
+[10-Jan-2025 16:02:32 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:02:33 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:02:34 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:02:34 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:03:30 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh" not found
+[10-Jan-2025 16:03:31 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh" not found
+[10-Jan-2025 16:03:31 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh" not found
+[10-Jan-2025 16:03:31 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh" not found
+[10-Jan-2025 16:03:32 Europe/Berlin] Class "Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh" not found
+[10-Jan-2025 16:04:47 Europe/Berlin] Class "Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin" not found
+[10-Jan-2025 16:04:48 Europe/Berlin] Class "Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin" not found
+[10-Jan-2025 16:04:48 Europe/Berlin] Class "Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin" not found
+[10-Jan-2025 16:04:48 Europe/Berlin] Class "Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin" not found
+[10-Jan-2025 16:04:48 Europe/Berlin] Class "Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin" not found
+[10-Jan-2025 16:05:13 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:05:14 Europe/Berlin] Class "App\Exception" not found
+[10-Jan-2025 16:05:39 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:05:39 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:05:40 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:05:40 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:06:58 Europe/Berlin] Object of class App\QRCodeGenerator could not be converted to string
+[10-Jan-2025 16:06:58 Europe/Berlin] Object of class App\QRCodeGenerator could not be converted to string
+[10-Jan-2025 16:06:59 Europe/Berlin] Object of class App\QRCodeGenerator could not be converted to string
+[10-Jan-2025 16:06:59 Europe/Berlin] Object of class App\QRCodeGenerator could not be converted to string
+[10-Jan-2025 16:08:26 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:08:27 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:09:11 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:09:12 Europe/Berlin] Failed to generate PDF: Cannot embed SVG in PDF without Imagick extension
+[10-Jan-2025 16:11:38 Europe/Berlin] The link has expired.
+[10-Jan-2025 16:16:07 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::writeString()
+[10-Jan-2025 16:16:08 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::writeString()
+[10-Jan-2025 16:16:43 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::writeDataUri()
+[10-Jan-2025 16:16:44 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::writeDataUri()
+[10-Jan-2025 16:18:34 Europe/Berlin] Call to undefined method Endroid\QrCode\Writer\PngWriter::writeString()
+[10-Jan-2025 16:18:34 Europe/Berlin] Call to undefined method Endroid\QrCode\Writer\PngWriter::writeString()
+[10-Jan-2025 16:18:35 Europe/Berlin] Call to undefined method Endroid\QrCode\Writer\PngWriter::writeString()
+[10-Jan-2025 16:21:58 Europe/Berlin] Call to undefined method Endroid\QrCode\Builder\Builder::create()
+[10-Jan-2025 16:21:59 Europe/Berlin] Call to undefined method Endroid\QrCode\Builder\Builder::create()
+[10-Jan-2025 16:22:46 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 16:22:46 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 16:22:46 Europe/Berlin] Call to undefined method Endroid\QrCode\QrCode::create()
+[10-Jan-2025 16:27:32 Europe/Berlin] The Fpdf writer requires FPDF as dependency but the class "\FPDF" couldn't be found.
+[10-Jan-2025 16:29:10 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:16 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:17 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:18 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:18 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:55 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:56 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:57 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:30:58 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:29 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:30 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:30 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:30 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:31 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:32 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:33:32 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:34:27 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:34:28 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:35:36 Europe/Berlin] Class "App\Controllers\Pages\QrCode" not found
+[10-Jan-2025 16:35:36 Europe/Berlin] Class "App\Controllers\Pages\QrCode" not found
+[10-Jan-2025 16:35:55 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:36:10 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:37:27 Europe/Berlin] Class "App\Controllers\Pages\QrCode" not found
+[10-Jan-2025 16:37:41 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:37:42 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:37:42 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:38:21 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:38:22 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:38:46 Europe/Berlin] Endroid\QrCode\QrCode::setErrorCorrectionLevel(): Argument #1 ($errorCorrectionLevel) must be of type Endroid\QrCode\ErrorCorrectionLevel, string given, called in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 63
+[10-Jan-2025 16:38:47 Europe/Berlin] Endroid\QrCode\QrCode::setErrorCorrectionLevel(): Argument #1 ($errorCorrectionLevel) must be of type Endroid\QrCode\ErrorCorrectionLevel, string given, called in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 63
+[10-Jan-2025 16:39:10 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:39:10 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:39:11 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:40:00 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:40:01 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:40:02 Europe/Berlin] Unable to generate image: check your GD installation
+[10-Jan-2025 16:59:04 Europe/Berlin] PHP Warning:  fopen(images/bg1.png): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1274
+[10-Jan-2025 16:59:04 Europe/Berlin] FPDF error: Can't open image file: images/bg1.png
+[10-Jan-2025 17:00:27 Europe/Berlin] PHP Warning:  fopen(images/bg1.png): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1274
+[10-Jan-2025 17:00:27 Europe/Berlin] FPDF error: Can't open image file: images/bg1.png
+[10-Jan-2025 17:00:28 Europe/Berlin] PHP Warning:  fopen(images/bg1.png): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1274
+[10-Jan-2025 17:00:28 Europe/Berlin] FPDF error: Can't open image file: images/bg1.png
+[10-Jan-2025 17:01:53 Europe/Berlin] PHP Warning:  getimagesize(images/default_passport.jpg): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1255
+[10-Jan-2025 17:01:53 Europe/Berlin] FPDF error: Missing or incorrect image file: images/default_passport.jpg
+[10-Jan-2025 17:02:37 Europe/Berlin] FPDF error: Not a JPEG file: C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon/public_html/assets/images/profile.png
+[10-Jan-2025 17:02:49 Europe/Berlin] PHP Warning:  fopen(images/default_qrcode.png): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1274
+[10-Jan-2025 17:02:49 Europe/Berlin] FPDF error: Can't open image file: images/default_qrcode.png
+[11-Jan-2025 10:29:38 Europe/Berlin] App\SlipGenerator::generateRow(): Argument #3 ($y) must be of type ?int, string given, called in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\SlipGenerator.php on line 50
+[11-Jan-2025 10:29:42 Europe/Berlin] App\SlipGenerator::generateRow(): Argument #3 ($y) must be of type ?int, string given, called in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\SlipGenerator.php on line 50
+[11-Jan-2025 11:32:35 Europe/Berlin] PHP Warning:  fopen(C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon/public/uploads/image_677ff79ecb1cd9.42535560.png): Failed to open stream: No such file or directory in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php on line 1274
+[11-Jan-2025 11:32:35 Europe/Berlin] FPDF error: Can't open image file: C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon/public/uploads/image_677ff79ecb1cd9.42535560.png
+[11-Jan-2025 11:35:19 Europe/Berlin] Call to undefined method FPDF::Ellipse()

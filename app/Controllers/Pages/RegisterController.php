@@ -6,6 +6,6 @@ class RegisterController
     public function index()
     {
         global $twig;
-        echo $twig->render('register.twig', );
+        echo $twig->render('register.twig', ['REGISTRATION_DETAILS' => REGISTRATION_DETAILS]);
     }
 }

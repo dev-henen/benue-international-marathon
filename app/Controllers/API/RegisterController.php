@@ -3,19 +3,12 @@
 namespace App\Controllers\API;
 
 use App\Models\Register;
+use Payment\PaystackPayment;
 
 require ROOT_PATH . '/bootstrap/database.php';
 require ROOT_PATH . '/bootstrap/functions.php';
 require ROOT_PATH . '/bootstrap/payment.php';
 
-use Payment\PaystackPayment;
-
-
-// Set secure session cookie parameters
-ini_set('session.cookie_httponly', 1);
-ini_set('session.cookie_secure', 1);
-ini_set('session.cookie_samesite', 'Strict');
-ini_set('session.use_strict_mode', 1);
 
 session_start();
 
@@ -255,6 +248,7 @@ class RegisterController
             $register->emergency_phone_number = substr($data['emergencyPhoneNumber'], 0, 20);
             $register->passport = $passport_name;
             $register->payment_reference = $transaction_reference;
+            $register->reg_year = REGISTRATION_DETAILS['year'];
             $register->save();
 
             // Clear sensitive data from session

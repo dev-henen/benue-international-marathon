@@ -5,7 +5,8 @@
 				<ul class="flex items-center gap-4 text-sm">
 					<li>
 						<a href="/">
-							<img src="/assets/images/logo.png" alt="logo" width="70" class="invert dark:invert-0 w-14 md:w-20" />
+							<img src="/assets/images/logo-dark.png" alt="Benue International Marathon logo" width="70" class="w-14 md:w-20 dark:hidden" />
+							<img src="/assets/images/logo.png" alt="Benue International Marathon logo" width="70" class="w-14 md:w-20 hidden dark:inline-block" />
 						</a>
 					</li>
 					{% set navLinks %}
@@ -82,7 +83,7 @@
 	<ul class="flex flex-col items-center gap-4 text-2xl mt-16">
 		{{ navLinks }}
 		<li>
-			<a href="/register/slip" class="text-gray-600 dark:text-gray-300 responsive-link">
+			<a href="/register/get-slip" class="text-gray-600 dark:text-gray-300 responsive-link">
 				Get slip
 			</a>
 		</li>

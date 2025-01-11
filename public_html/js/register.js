@@ -61,7 +61,7 @@ angular.module('registrationApp', [])
                     amount: transactionData.amount,
                     reference: transactionData.reference,
                     callback: (response) => resolve(response),
-                    onClose: () => () => {}, //reject(new Error('Payment window closed')),
+                    onClose: () => reject(), //reject(new Error('Payment window closed'))
                 });
                 handler.openIframe();
             });
@@ -209,7 +209,8 @@ angular.module('registrationApp', [])
                     if (response.data.success) {
                         $scope.isProcessing = true;
                         await PaymentService.processPayment($scope.formData.email);
-                        alert('Registration and payment completed successfully!');
+                        //alert('Registration and payment completed successfully!');
+                        window.location.replace('/register/get-slip');
                     } else {
                         throw new Error(response.data.message || 'Registration failed');
                     }

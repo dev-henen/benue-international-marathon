@@ -7,9 +7,19 @@ use Twig\Environment;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 define('ROOT_PATH', dirname(__DIR__));
+define('ENCRYPTION_KEY', 'EeDk40KKS4#lld,d/dsd|sd/d.#@S3))@');
+define('REGISTRATION_DETAILS', [
+    'year' => 2025,
+    'is_open' => true
+]);
 
 ini_set('display_errors', 1); // TODO: remove this in production
 ini_set('error_log', ROOT_PATH . '/error.log');
+ini_set('session.cookie_httponly', 1);
+ini_set('session.cookie_secure', 1);
+ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.use_strict_mode', 1);
+
 error_reporting(E_ALL);
 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
