@@ -35,7 +35,7 @@ class SlipGenerator
         $this->pdf->SetFont('Arial', 'B', 12);
 
         // Images Section
-        $this->pdf->Image($details['passport'] ?? ROOT_PATH . '/public_html/assets/images/profile.png', 15, 48, 25, 25, 'png');
+        $this->pdf->Image($details['passport'] ?? ROOT_PATH . '/public_html/assets/images/profile.png', 15, 48, 25, 25, pathinfo($details['passport'], PATHINFO_EXTENSION));
         $this->pdf->Cell(0, 45, '', 0, 0, 'L');
         if ($details['qrcode_location']) {
             $this->pdf->Image($details['qrcode_location'], 165, 45, 30, 30, 'png');

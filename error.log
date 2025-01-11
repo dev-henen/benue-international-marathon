@@ -1,0 +1,5 @@
+[11-Jan-2025 15:48:10 Europe/Berlin] No registration found.
+[11-Jan-2025 15:48:51 Europe/Berlin] The link has expired.
+[11-Jan-2025 15:49:04 Europe/Berlin] FPDF error: Not a PNG file: C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon/public_html/uploads/image_67828488628c36.80881559.jpg
+[11-Jan-2025 15:52:04 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php:1022) in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 93
+[11-Jan-2025 15:52:10 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\vendor\setasign\fpdf\fpdf.php:1022) in C:\Users\Henen\Desktop\Projects\Repositories\benue-international-marathon\app\Controllers\Pages\GetSlipController.php on line 93

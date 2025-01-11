@@ -89,7 +89,7 @@ class GetSlipController
             ]);
 
             // Output the PDF
-            $slip->outputPDF();
+            $slip->downloadPDF();
         } catch (\Throwable $e) {
             error_log($e->getMessage());
             http_response_code(400); // Return 400 for client error

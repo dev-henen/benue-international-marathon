@@ -155,6 +155,13 @@ class RegistrationManager {
             throw new Error("Modal element not found");
         }
 
+        if(data.reg_date) {
+            data.reg_date = parseDate(data.reg_date);
+        }
+        if(data.birthday) {
+            data.birthday = parseDate(data.birthday);
+        }
+
         modal.innerHTML = modal.innerHTML.replace(
             /\[\[(\w+)\]\]/g,
             (match, key) => data[key] ?? match
@@ -253,4 +260,18 @@ async function confirmMySlip() {
     } catch (error) {
         resultElement.innerText = `Scanner error: ${error.message}`;
     }
+}
+
+
+function parseDate(input) {
+    const date = new Date(input);
+    
+    if (isNaN(date)) {
+        throw new Error("Invalid date format");
+    }
+
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
+
+    return formattedDate;
 }
