@@ -6,9 +6,6 @@ use Yabacon\Paystack;
 
 class PaystackPayment
 {
-    // Paystack configuration
-    private static $secretKey = 'sk_test_f277fea41c68d1632b389d90f793f991b731d624';
-
     /**
      * Generate a transaction reference
      *
@@ -49,7 +46,7 @@ class PaystackPayment
             ];
         }
 
-        $paystack = new Paystack(self::$secretKey);
+        $paystack = new Paystack($_ENV['PAYSTACK_PAYMENT_SECRET_KEY'] ?? '');
 
         try {
             $tranx = $paystack->transaction->verify(['reference' => $reference]);

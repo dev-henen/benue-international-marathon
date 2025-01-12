@@ -1,6 +1,6 @@
 angular.module('registrationApp', [])
     .constant('CONFIG', {
-        PAYSTACK_KEY: 'pk_test_03a119ce0db36dd02719332a3e85d5664cc43507',
+        PAYSTACK_KEY: PAYSTACK_PAYMENT_PUBLIC_KEY,
         API_ENDPOINTS: {
             REGISTER: '/api/register',
             TRANSACTION: '/api/generate-transaction-reference',
@@ -209,7 +209,7 @@ angular.module('registrationApp', [])
                     if (response.data.success) {
                         $scope.isProcessing = true;
                         await PaymentService.processPayment($scope.formData.email);
-                        //alert('Registration and payment completed successfully!');
+                        alert('Registration and payment completed successfully!');
                         window.location.replace('/register/get-slip');
                     } else {
                         throw new Error(response.data.message || 'Registration failed');

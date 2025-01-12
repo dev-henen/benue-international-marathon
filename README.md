@@ -157,6 +157,9 @@ MAIL_FROM_NAME="Benue International Marathon"
 # Twig Configuration
 TWIG_DEBUG=true
 TWIG_AUTO_RELOAD=true
+
+PAYSTACK_PAYMENT_SECRET_KEY=sk_test_f277fea41c68d16
+PAYSTACK_PAYMENT_PUBLIC_KEY=pk_test_03a119ce0db36d
 ```
 
 ---
