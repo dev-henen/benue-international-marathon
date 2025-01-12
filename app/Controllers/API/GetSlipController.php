@@ -52,15 +52,15 @@ class GetSlipController
                 $encrypted_link = $encryption->encrypt(json_encode($get_slip_details));
 
                 $getSlipUrl = "http://localhost:8000/getSlip?hash=" . urlencode($encrypted_link);
-                $getSlipLink = "<a href='" . htmlspecialchars($getSlipUrl, ENT_QUOTES, 'UTF-8') . "'>Click here to download your registration slip</a>";
 
                 $data = [
                     'subject' => sprintf("%s, you requested to download your registration slip", $registration->firstname),
                     'title' => "Here is your registration slip",
                     'message' => sprintf(
-                        'Please click this link to download your registration slip: %s',
-                        $getSlipLink
+                        'Please click the link/button bellow to download your registration slip. Note: this link will expire in 1 hour.',
                     ),
+                    'action_link' => htmlspecialchars($getSlipUrl, ENT_QUOTES, 'UTF-8'),
+                    'action_text' => 'Download',
                 ];
 
 
