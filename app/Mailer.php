@@ -23,19 +23,21 @@ class Mailer
 
         try {
             // SMTP Configuration
-            $mail->isSMTP();
-            $mail->Host = 'sandbox.smtp.mailtrap.io';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'e950bed8fa3a6d';
-            $mail->Password = '6fa08997aab70e';
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 2525;
-
-            // Use the local mail() function (default PHP mailer)
-            //$mail->isMail();
+            if($_ENV['MAIL_DRIVER'] == 'smtp') {
+                $mail->isSMTP();
+    
+                $mail->Host = $_ENV['MAIL_HOST'];
+                $mail->SMTPAuth = filter_var($_ENV['MAIL_SMTP_AUTH'], FILTER_VALIDATE_BOOLEAN);
+                $mail->Username = $_ENV['MAIL_USERNAME'];
+                $mail->Password = $_ENV['MAIL_PASSWORD'];
+                $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
+                $mail->Port = $_ENV['MAIL_PORT'];
+            } else {
+                $mail->isMail();
+            }
 
             // Set sender info
-            $mail->setFrom('0f4ed0614d-0cc719+1@inbox.mailtrap.io', 'Benue International Marathon');
+            $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
             $mail->addAddress($to);
 
             $mail->isHTML(true);
@@ -48,6 +50,13 @@ class Mailer
             }
 
             $template = file_get_contents($templatePath);
+
+            if(empty($data['action_link'])) {
+                $data['action_link'] = 'https://benueinternationalmarathon.com';
+            }
+            if(empty($data['action_text'])) {
+                $data['action_text'] = 'Visit our website';
+            }
 
             // Replace placeholders in the template with provided data
             foreach ($data as $key => $value) {

@@ -3,12 +3,10 @@
 namespace App\Controllers\API;
 
 use App\Models\Register;
-use Payment\PaystackPayment;
+use App\PaystackPayment;
+use App\ImageHandler;
 
 require ROOT_PATH . '/bootstrap/database.php';
-require ROOT_PATH . '/bootstrap/functions.php';
-require ROOT_PATH . '/bootstrap/payment.php';
-
 
 session_start();
 
@@ -163,7 +161,7 @@ class RegisterController
                 return;
             }
 
-            $passport = validateAndSaveImage($data['passport']['base64'], false);
+            $passport = ImageHandler::validateAndSaveImage($data['passport']['base64'], false);
 
             if ($passport['success'] === false) {
                 $this->sendResponse(false, ['errors' => ['passport' => $passport['error']]], 400);
@@ -222,7 +220,7 @@ class RegisterController
             $data = $_SESSION['registration_data'];
             $transaction_reference = htmlspecialchars($rawData['reference'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
-            $passport = validateAndSaveImage($data['passport']['base64'], true);
+            $passport = ImageHandler::validateAndSaveImage($data['passport']['base64'], true);
             $passport_name = $passport['filename'];
 
             // Verify payment with amount validation

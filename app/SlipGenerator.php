@@ -130,7 +130,7 @@ class SlipGenerator
     public function outputPDF()
     {
         header('Content-Type: application/pdf');
-        header('Content-Disposition: inline; filename="slip.pdf"');
+        header('Content-Disposition: inline; filename="benue_marathon_reg_slip.pdf"');
         $this->pdf->Output();
     }
 

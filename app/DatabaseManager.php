@@ -12,21 +12,20 @@ class DatabaseManager
         $capsule = new Capsule;
 
         $capsule->addConnection([
-            'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
-            'database'  => 'bim',
-            'username'  => 'root',
-            'password'  => '',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
+            'driver'    => $_ENV['DB_DRIVER'],
+            'host'      => $_ENV['DB_HOST'],
+            'database'  => $_ENV['DB_DATABASE'],
+            'username'  => $_ENV['DB_USERNAME'],
+            'password'  => $_ENV['DB_PASSWORD'],
+            'charset'   => $_ENV['DB_CHARSET'],
+            'collation' => $_ENV['DB_COLLATION'],
+            'prefix'    => $_ENV['DB_PREFIX'],
         ]);
 
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
     }
 
-    // Public static method to get the instance
     public static function getInstance()
     {
         if (self::$instance === null) {

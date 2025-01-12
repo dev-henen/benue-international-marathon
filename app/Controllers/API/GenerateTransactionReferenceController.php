@@ -2,9 +2,7 @@
 
 namespace App\Controllers\API;
 
-use Payment\PaystackPayment;
-
-require ROOT_PATH . '/bootstrap/payment.php';
+use App\PaystackPayment;
 
 session_start();
 

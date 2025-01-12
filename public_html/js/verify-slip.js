@@ -36,7 +36,7 @@ class QRScanner {
 
     async findWorkingCamera() {
         const cameras = await this.getCameras();
-        
+
         if (!cameras.length) {
             throw new Error(ERROR_MESSAGES.NO_CAMERAS);
         }
@@ -61,8 +61,8 @@ class QRScanner {
     }
 
     async testCameraConfig(config) {
-        const stream = await navigator.mediaDevices.getUserMedia({ 
-            video: typeof config === 'string' ? { deviceId: config } : config 
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: typeof config === 'string' ? { deviceId: config } : config
         });
         stream.getTracks().forEach(track => track.stop());
         return config;
@@ -131,6 +131,8 @@ class QRScanner {
 }
 
 class RegistrationManager {
+    static template = null;
+
     static async fetchRegistrationInfo(hashCode) {
         if (!hashCode) {
             throw new Error("Hash code is required");
@@ -155,17 +157,27 @@ class RegistrationManager {
             throw new Error("Modal element not found");
         }
 
-        if(data.reg_date) {
+        // Store the template content if it's the first time
+        if (!this.template) {
+            this.template = modal.innerHTML;
+        }
+
+        // Process dates if they exist
+        if (data.reg_date) {
             data.reg_date = parseDate(data.reg_date);
         }
-        if(data.birthday) {
+        if (data.birthday) {
             data.birthday = parseDate(data.birthday);
         }
 
-        modal.innerHTML = modal.innerHTML.replace(
+        // Start with the template and replace all placeholders
+        let newContent = this.template;
+        newContent = newContent.replace(
             /\[\[(\w+)\]\]/g,
             (match, key) => data[key] ?? match
         );
+
+        modal.innerHTML = newContent;
     }
 }
 
@@ -187,12 +199,12 @@ class ModalManager {
     static open() {
         const modal = document.getElementById('modal');
         const backdrop = document.getElementById('modal-backdrop');
-        
+
         if (!modal || !backdrop) return;
 
         backdrop.classList.remove('hidden');
         modal.classList.remove('hidden');
-        
+
         requestAnimationFrame(() => {
             backdrop.classList.add('opacity-100');
             modal.classList.add('opacity-100');
@@ -203,12 +215,12 @@ class ModalManager {
     static close() {
         const modal = document.getElementById('modal');
         const backdrop = document.getElementById('modal-backdrop');
-        
+
         if (!modal || !backdrop) return;
 
         backdrop.classList.remove('opacity-100');
         modal.classList.remove('opacity-100');
-        
+
         setTimeout(() => {
             modal.classList.add('hidden');
             backdrop.classList.add('hidden');
@@ -220,7 +232,7 @@ class ModalManager {
         const moreDetails = document.getElementById('more-details');
         const toggleText = document.getElementById('toggle-text');
         const chevronIcon = document.getElementById('chevron-icon');
-        
+
         if (!moreDetails || !toggleText || !chevronIcon) return;
 
         const isHidden = moreDetails.classList.contains('hidden');
@@ -241,7 +253,7 @@ async function confirmMySlip() {
     resultElement.innerText = "Checking camera availability...";
 
     const scanner = new QRScanner("qr-reader");
-    
+
     try {
         await scanner.start(async (error, decodedText) => {
             if (error) {
@@ -265,7 +277,7 @@ async function confirmMySlip() {
 
 function parseDate(input) {
     const date = new Date(input);
-    
+
     if (isNaN(date)) {
         throw new Error("Invalid date format");
     }

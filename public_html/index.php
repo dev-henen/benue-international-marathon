@@ -5,22 +5,15 @@ use FastRoute\RouteCollector;
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Dotenv\Dotenv;
 
 define('ROOT_PATH', dirname(__DIR__));
-define('ENCRYPTION_KEY', 'EeDk40KKS4#lld,d/dsd|sd/d.#@S3))@');
-define('REGISTRATION_DETAILS', [
-    'year' => 2025,
-    'is_open' => true
-]);
 
-ini_set('display_errors', 1); // TODO: remove this in production
 ini_set('error_log', ROOT_PATH . '/error.log');
 ini_set('session.cookie_httponly', 1);
 ini_set('session.cookie_secure', 1);
 ini_set('session.cookie_samesite', 'Strict');
 ini_set('session.use_strict_mode', 1);
-
-error_reporting(E_ALL);
 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: private, max-age=0, must-revalidate");
@@ -28,13 +21,34 @@ header("Pragma: no-cache");
 
 require ROOT_PATH . '/vendor/autoload.php';
 
+// Load .env file
+$dotenv = Dotenv::createImmutable(ROOT_PATH);
+$dotenv->load();
+
+// Set error display based on environment
+if ($_ENV['APP_ENV'] === 'development') {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(0);
+}
+
 // Set up Twig
 $templateDir = ROOT_PATH . '/app/templates';
 $loader = new FilesystemLoader($templateDir);
 $GLOBALS['twig'] = new Environment($loader, [
     'cache' => ROOT_PATH . '/cache',
-    'debug' => true,
-    'auto_reload' => true, // Enable this for development
+    'debug' => filter_var($_ENV['TWIG_DEBUG'], FILTER_VALIDATE_BOOLEAN),
+    'auto_reload' => filter_var($_ENV['TWIG_AUTO_RELOAD'], FILTER_VALIDATE_BOOLEAN),
+]);
+
+define('ENCRYPTION_KEY', $_ENV['ENCRYPTION_KEY']);
+define('REGISTRATION_DETAILS', [
+    'year' => 2025,
+    'is_open' => true
 ]);
 
 // Determine whether the request is for the API or pages
