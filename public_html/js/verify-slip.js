@@ -145,7 +145,7 @@ class RegistrationManager {
         });
 
         if (!response.ok) {
-            throw new Error(`API Error: ${response.statusText}`);
+            throw new Error(`${response.statusText}`);
         }
 
         return response.json();

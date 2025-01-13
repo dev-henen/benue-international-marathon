@@ -65,19 +65,25 @@ class GetSlipController
 
 
                 if (Mailer::send($email, $data['subject'], $data)) {
-                    echo "Email sent successfully!";
+                    $this->sendResponse(false, [
+                        'message' => 'Email sent successfully!'
+                    ], 400);
                 } else {
-                    throw new \Exception("Failed to send email.");
+                    $this->sendResponse(false, [
+                        'message' => 'Failed to send email.'
+                    ], 400);
                 }
             } else {
-                throw new \Exception("No registration found.");
+                $this->sendResponse(false, [
+                    'message' => 'No registration found.'
+                ], 400);
             }
         } catch (\Throwable $e) {
             error_log($e->getMessage());
 
             $this->sendResponse(false, [
                 'message' => 'An unexpected error occurred'
-            ], 500);
+            ], 200);
         }
     }
 

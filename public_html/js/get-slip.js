@@ -44,7 +44,7 @@ angular.module('getSlipApp', [])
         })
         .catch(function (error) {
           console.error('Error:', error);
-          alert('An error occurred. Please try again later.');
+          alert(error.data.message || 'An error occurred while trying to send the registration slip.');
         });
     };
   }]);

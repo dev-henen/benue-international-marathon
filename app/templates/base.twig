@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,5 +13,10 @@
 		{% include 'header.twig' %}
 		{% block content %}{% endblock %}
 		{% include 'footer.twig' %}
+		
+	    <div id="loading-indicator" class="fixed inset-0 bg-black/70 hidden backdrop-blur-sm transition-opacity duration-300 ease-in-out z-50">
+	        <img alt="Loading" src="/assets/images/clock.gif" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+	    </div>
+		<script src="/js/loading-indicator.js"></script>
 	</body>
 </html>
