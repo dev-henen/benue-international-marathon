@@ -67,6 +67,13 @@ class RegisterController
             } else if (mb_strlen($email) > 255) {
                 $errors['email'] = 'Email must be less than 255 characters';
             }
+
+            $registration = Register::where('email', $data['email'])
+                ->where('reg_year', REGISTRATION_DETAILS['year'])
+                ->first();
+            if ($registration) {
+                $errors['email'] = "This email has already been used to register for the Benue International Marathon " . REGISTRATION_DETAILS['year'] . ".";
+            }
         }
 
         // Validate phone numbers with strict pattern
