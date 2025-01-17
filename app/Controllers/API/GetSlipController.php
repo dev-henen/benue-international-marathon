@@ -5,6 +5,7 @@ namespace App\Controllers\API;
 use App\Models\Register;
 use App\Mailer;
 use App\SimpleEncryption;
+use App\CustomRateLimiter;
 
 require ROOT_PATH . '/bootstrap/database.php';
 
@@ -16,6 +17,18 @@ class GetSlipController
 
     public function sendLinkToEmail(): void
     {
+
+        $limiter = new CustomRateLimiter();
+
+        $isLimited = $limiter->isLimitExceeded(
+            'send_register_link',
+            allowedJobs: 50,  // allow 50 attempts
+            windowInSeconds: 60  // in a 60-second window
+        );
+        if ($isLimited) {
+            $this::sendResponse(false, ['message' => 'Too many requests. Please try again later.'], 429);
+            return;
+        }
 
         try {
             $input = file_get_contents('php://input');
@@ -89,6 +102,19 @@ class GetSlipController
 
     public function getRegistrationInfo(): void
     {
+
+        $limiter = new CustomRateLimiter();
+
+        $isLimited = $limiter->isLimitExceeded(
+            'get_register_link',
+            allowedJobs: 50,  // allow 5 attempts
+            windowInSeconds: 60  // in a 60-second window
+        );
+        if ($isLimited) {
+            $this::sendResponse(false, ['message' => 'Too many requests. Please try again later.'], 429);
+            return;
+        }
+
         try {
             $input = file_get_contents('php://input');
             if ($input === false) {

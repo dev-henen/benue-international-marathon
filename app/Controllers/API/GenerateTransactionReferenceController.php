@@ -3,6 +3,7 @@
 namespace App\Controllers\API;
 
 use App\PaystackPayment;
+use App\CustomRateLimiter;
 
 session_start();
 
@@ -11,6 +12,18 @@ class GenerateTransactionReferenceController
 
     public function registration(): void
     {
+
+        $limiter = new CustomRateLimiter();
+
+        $isLimited = $limiter->isLimitExceeded(
+            '/register',
+            allowedJobs: 50,  // allow 5 attempts
+            windowInSeconds: 60  // in a 60-second window
+        );
+        if ($isLimited) {
+            $this::sendResponse(false, ['error' => 'Too many requests. Please try again later.'], 429);
+            return;
+        }
 
         try {
             $input = file_get_contents('php://input');

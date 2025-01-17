@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2025 at 03:39 PM
+-- Generation Time: Jan 17, 2025 at 10:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,14 +34,6 @@ CREATE TABLE `accounts` (
   `RegDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Dumping data for table `accounts`
---
-
-INSERT INTO `accounts` (`ID`, `UserName`, `Email`, `RegDate`) VALUES
-(7, 'Acho silas suur', 'achosilassuur2020@gmail.com', '2023-06-23 02:01:38'),
-(8, 'Moses Henen', 'mosesmax068@gmail.com', '2023-06-23 02:01:38');
-
 -- --------------------------------------------------------
 
 --
@@ -55,15 +47,15 @@ CREATE TABLE `registrations` (
   `gender` enum('male','female','','') NOT NULL,
   `blood_group` varchar(2) NOT NULL,
   `birthday` date NOT NULL,
-  `country` varchar(30) NOT NULL,
-  `state_of_origin` varchar(30) NOT NULL,
-  `state_of_residence` varchar(30) NOT NULL,
+  `country` varchar(20) NOT NULL,
+  `state_of_origin` varchar(20) NOT NULL,
+  `state_of_residence` varchar(20) NOT NULL,
   `email` varchar(300) NOT NULL,
   `phone_number` varchar(30) NOT NULL,
   `contact_address` text NOT NULL,
   `my_height` varchar(6) NOT NULL,
   `my_weight` varchar(6) NOT NULL,
-  `emergency_phone_number` varchar(30) NOT NULL,
+  `emergency_phone_number` varchar(20) NOT NULL,
   `passport` varchar(300) NOT NULL,
   `payment_reference` varchar(255) NOT NULL,
   `reg_year` year(4) NOT NULL DEFAULT current_timestamp(),
@@ -100,7 +92,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `registrations`
 --
 ALTER TABLE `registrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
