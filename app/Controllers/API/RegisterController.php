@@ -153,9 +153,9 @@ class RegisterController
 
         try {
             // Validate Content-Type
-            if (!isset($_SERVER['CONTENT_TYPE']) || $_SERVER['CONTENT_TYPE'] !== 'application/json') {
-                throw new \RuntimeException('Invalid Content-Type. Expected application/json');
-            }
+            // if (!isset($_SERVER['CONTENT_TYPE']) || $_SERVER['CONTENT_TYPE'] !== 'application/json') {
+            //     throw new \RuntimeException('Invalid Content-Type. Expected application/json');
+            // }
 
             // Get and decode input data with error checking
             $rawData = file_get_contents('php://input');
