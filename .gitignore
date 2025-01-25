@@ -3,3 +3,7 @@ node_modules/
 cache/
 /production.txt
 .env
+/public_html/composer.phar
+error_log
+error.log
+errorlog
