@@ -48,7 +48,7 @@ $GLOBALS['twig'] = new Environment($loader, [
 define('ENCRYPTION_KEY', $_ENV['ENCRYPTION_KEY']);
 define('REGISTRATION_DETAILS', [
     'year' => 2025,
-    'is_open' => false
+    'is_open' => true
 ]);
 
 // Determine whether the request is for the API or pages
