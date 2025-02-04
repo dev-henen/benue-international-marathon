@@ -164,8 +164,8 @@ class RegisterController
             }
 
             // Limit input size to prevent DOS attacks
-            if (strlen($rawData) > 1000000) { // 1MB limit
-                throw new \RuntimeException('Request body too large');
+            if (strlen($rawData) > 3000000) { // 3MB limit
+                throw new \RuntimeException('Request body too large, or the image you provided may be too large. Please, consider compressing your images before upload.');
             }
 
             $data = json_decode($rawData, true, 512, JSON_THROW_ON_ERROR);
@@ -242,7 +242,7 @@ class RegisterController
                 throw new \RuntimeException('Failed to read input data');
             }
 
-            if (strlen($rawData) > 1000000) { // 1MB limit
+            if (strlen($rawData) > 3000000) { // 3MB limit
                 throw new \RuntimeException('Request body too large');
             }
 
@@ -260,7 +260,7 @@ class RegisterController
 
             // Verify payment with amount validation
             $result = PaystackPayment::verifyTransaction($transaction_reference);
-            if ($result['success'] !== true || $result['data']['amount'] !== 200000) {
+            if ($result['success'] !== true || $result['data']['amount'] !== 500000) {
                 throw new \RuntimeException('Transaction verification failed');
             }
 
