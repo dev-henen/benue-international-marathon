@@ -84,7 +84,7 @@ class GetSlipController
                 'blood_group' => $registration->blood_group,
                 'passport' => ROOT_PATH . '/public_html/uploads/' . $registration->passport,
                 'qrcode_location' => $tempQRCodeUrl,
-                'terms_conditions' => 'I declare my understanding that running is a potentially Hazardous activity in which I am only permitted to participate in with sufficient training and a good level of overall health. I hereby accept all risks involved which may include injury or death. I agree to abide by the T & C as well as rules and regulations of TUM 2025. I grant permission to TUM and unicentral R.G Nigeria LTD for the use of my personal data provided by registration and any of my Photographs, passports or Recordings of me and others recorded during this event for any legitimate purpose. ',
+                'terms_conditions' => 'By participating in this event, I acknowledge that running is a potentially hazardous activity that requires adequate training and a good overall level of health. I understand and assume all risks associated with participation, including the possibility of injury or death. I agree to comply with the Terms and Conditions, rules, and regulations of Benue International Marathon 2025. I hereby grant permission to Benue International Marathon LTD to collect, use, and disclose my personal data, photographs, passport, and recordings taken during the event for legitimate purposes."',
                 'app_name' => 'Benue International Marathon ' . REGISTRATION_DETAILS['year'],
             ]);
 
