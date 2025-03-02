@@ -38,7 +38,7 @@ class GenerateTransactionReferenceController
 
             $email = trim($input['email']);
             //$amount = 500000; // Amount in kobo
-            $amount = 10000; // Amount in kobo
+            $amount = 500000; // Amount in kobo
 
             if (!isset($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $this::sendResponse(false, ['error' => 'Invalid email address'], 400);

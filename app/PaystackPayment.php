@@ -10,7 +10,7 @@ class PaystackPayment
      * Generate a transaction reference
      *
      * @param string $email Customer's email
-     * @param int $amount Amount in kobo (e.g., 2000 NGN = 200000 kobo)
+     * @param int $amount Amount in kobo (e.g., 5000 NGN = 500000 kobo)
      * @return array Contains either 'success' and 'data' or 'success' and 'error'
      */
     public static function generateTransactionReference(string $email, int $amount): array
