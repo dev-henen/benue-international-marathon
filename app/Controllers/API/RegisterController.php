@@ -260,7 +260,7 @@ class RegisterController
 
             // Verify payment with amount validation
             $result = PaystackPayment::verifyTransaction($transaction_reference);
-            if ($result['success'] !== true || $result['data']['amount'] !== 500000) {
+            if ($result['success'] !== true || $result['data']['amount'] !== 10000) {
                 throw new \RuntimeException('Transaction verification failed');
             }
 
