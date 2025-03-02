@@ -64,7 +64,7 @@ class GetSlipController
                 $encryption = new SimpleEncryption($encryptionKey);
                 $encrypted_link = $encryption->encrypt(json_encode($get_slip_details));
 
-                $getSlipUrl = "http://localhost:8000/getSlip?hash=" . urlencode($encrypted_link);
+                $getSlipUrl = "https://benueinternationalmarathon.com/getSlip?hash=" . urlencode($encrypted_link);
 
                 $data = [
                     'subject' => sprintf("%s, you requested to download your registration slip", $registration->firstname),
